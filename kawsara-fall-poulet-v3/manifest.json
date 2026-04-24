@@ -1,0 +1,17 @@
+{
+  "name": "Kawsara Fall Poulet",
+  "short_name": "KawsaraP",
+  "description": "Vente de poulets de chair de qualité par Kawsara Fall",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#eab308",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/1046/1046771.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

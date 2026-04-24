@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kawsara Fall Poulet - L'App du Poulet</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#eab308">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Icon for iOS -->
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/1046/1046771.png">
+</head>
+<body>
+
+    <header>
+        <div class="logo">KAWSARA FALL POULET</div>
+        <div style="position: relative;" onclick="showCart()">
+            <i class="fas fa-shopping-cart text-xl"></i>
+            <span class="badge cart-count">0</span>
+        </div>
+    </header>
+
+    <div style="background: var(--white); padding: 15px; margin-bottom: 10px;">
+        <h2 style="font-size: 18px; font-weight: 900; margin-bottom: 5px;">Bienvenue ! 🐔</h2>
+        <p style="font-size: 13px; color: #6b7280;">Le meilleur poulet de chair, livré chez vous.</p>
+    </div>
+
+    <div id="product-grid" class="product-grid">
+        <!-- Products will be injected here -->
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Accueil</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-search"></i>
+            <span>Chercher</span>
+        </a>
+        <a href="javascript:void(0)" onclick="showCart()" class="nav-item" style="position: relative;">
+            <i class="fas fa-shopping-basket"></i>
+            <span>Panier</span>
+            <span class="badge cart-count">0</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-user"></i>
+            <span>Compte</span>
+        </a>
+    </nav>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                <h2 style="font-weight:900;">Ma Commande</h2>
+                <i class="fas fa-times" onclick="closeModal()" style="font-size:20px; color:#9ca3af;"></i>
+            </div>
+            
+            <div id="cart-items">
+                <!-- Cart items here -->
+            </div>
+
+            <div style="margin-top:20px; padding-top:20px; border-top:2px dashed #eee;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                    <span style="font-size:18px; font-weight:500;">Total à payer</span>
+                    <span id="cart-total" style="font-size:22px; font-weight:900; color:var(--primary-dark);">0 F</span>
+                </div>
+
+                <p style="font-size:12px; color:#6b7280; margin-bottom:15px;">Choisissez votre mode de validation :</p>
+                
+                <button onclick="checkoutWave()" class="checkout-btn btn-wave">
+                    <i class="fas fa-wallet mr-2"></i> Payer via WAVE
+                </button>
+                
+                <button onclick="checkoutWhatsApp()" class="checkout-btn btn-whatsapp">
+                    <i class="fab fa-whatsapp mr-2"></i> Commander via WHATSAPP
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
